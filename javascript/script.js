@@ -3,17 +3,15 @@
 let dadoMio = parseInt( (6 * Math.random() ) ) + 1;
 let dadoGiocatore = parseInt( (6 * Math.random() ) ) + 1;
 
-if (dadoGiocatore < dadoMio){
-    dadoMio = print("ho vinto");
-    dadoGiocatore = print("ho perso");
-}
-else (dadoGiocatore > dadoMio)
-    dadoMio = print("ho perso");
-    dadoGiocatore = print("ho vinto");
-}
-else if (dadoGiocatore = dadoMio) 
-    dadoMio = print("siamo pari");
-    dadoGiocatore = print("siamo pari");
+if (dadoGiocatore > dadoMio){
+    dadoGiocatore = "Ho vinto";
+    dadoMio = "ho perso";
+}else if(dadoMio > dadoGiocatore){
+    dadoMio = "ho vinto";
+    dadoGiocatore = "ho perso";
+}else {
+    dadoMio = "siamo pari";
+    dadoGiocatore = "siamo pari";
 }
 
 console.log(dadoGiocatore)
