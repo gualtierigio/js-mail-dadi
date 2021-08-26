@@ -17,12 +17,23 @@ if (dadoGiocatore > dadoMio){
 console.log(dadoGiocatore)
 console.log(dadoMio)
 
-let clientsMail = ["ciccio@bello.com", "gino@pasticcino.it", "mario@ttide.com", "seren@ata.net", "las@palmas.it"]
+let mailList = ["ciccio@bello.com", "gino@pasticcino.it", "mario@ttide.com", "seren@ata.net", "las@palmas.it"];
 
-document.getElementById("accesso").innerHTML
+let accesso = prompt("inserisci la tua mail per accedere");
 
-if (accesso != clientsMail){
-    alert = "tu non puoi passare";
-}else {
-    print("sei il benvenuto");
+let verificaMail = false;
+
+for (let i = 0; i < mailList.length; i++){
+
+    let mailCheck = mailList[i];
+
+    if (mailCheck == accesso){
+        verificaMail = true;
+    }
+}
+
+if (verificaMail == true){
+    alert("benvenido");
+}else if (verificaMail == false){
+    alert("tu non puoi passare");
 }
